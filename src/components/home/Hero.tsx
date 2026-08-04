@@ -2,111 +2,99 @@ export default function Hero() {
   return (
     <section
       style={{
-        minHeight: "90vh",
-        background: "#0D0D0D",
+        background:
+          "linear-gradient(135deg,#0D0D0D 0%, #1A1A1A 50%, #000000 100%)",
         color: "white",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
+        padding: "100px 20px",
         textAlign: "center",
-        padding: "40px 20px",
       }}
     >
       <p
         style={{
           color: "#D4AF37",
-          letterSpacing: "6px",
-          fontSize: "14px",
-          marginBottom: "20px",
+          fontWeight: "bold",
+          letterSpacing: "2px",
+          marginBottom: "15px",
         }}
       >
-        ✨ HANDMADE WITH LOVE ✨
+        ✨ PREMIUM HANDMADE MARKETPLACE
       </p>
 
       <h1
         style={{
+          fontSize: "56px",
           color: "#D4AF37",
-          fontSize: "64px",
-          fontWeight: "bold",
-          margin: "0",
-        }}
-      >
-        Zinam
-      </h1>
-
-      <h2
-        style={{
-          fontSize: "54px",
-          fontWeight: "bold",
-          marginTop: "10px",
           marginBottom: "20px",
         }}
       >
-        Marketplace
-      </h2>
-
-      <h3
-        style={{
-          fontSize: "24px",
-          maxWidth: "700px",
-          lineHeight: "1.5",
-        }}
-      >
-        Premium Handmade Crochet & Digital Products Marketplace
-      </h3>
+        Welcome to Zinam
+      </h1>
 
       <p
         style={{
           maxWidth: "700px",
-          color: "#BBBBBB",
-          marginTop: "20px",
+          margin: "auto",
+          color: "#CCCCCC",
           fontSize: "18px",
           lineHeight: "1.8",
         }}
       >
-        Discover unique handmade crochet products, premium digital templates,
-        gifts, and creative collections crafted with love by talented sellers.
+        Discover premium handmade crochet products, digital downloads,
+        personalized gifts and support talented small business owners from
+        Pakistan.
       </p>
 
       <div
         style={{
           display: "flex",
-          gap: "20px",
-          flexWrap: "wrap",
-          marginTop: "40px",
           justifyContent: "center",
+          gap: "20px",
+          marginTop: "40px",
+          flexWrap: "wrap",
         }}
       >
-        <button
+        <a
+          href="/shop"
           style={{
             background: "#D4AF37",
             color: "#000",
-            border: "none",
-            padding: "18px 40px",
+            padding: "15px 28px",
             borderRadius: "12px",
-            fontSize: "18px",
+            textDecoration: "none",
             fontWeight: "bold",
-            cursor: "pointer",
           }}
         >
-          🛍 Explore Store
-        </button>
+          🛍 Shop Now
+        </a>
 
-        <button
+        <a
+          href="#custom-order"
           style={{
-            background: "transparent",
-            color: "#D4AF37",
             border: "2px solid #D4AF37",
-            padding: "18px 40px",
+            color: "#D4AF37",
+            padding: "15px 28px",
             borderRadius: "12px",
-            fontSize: "18px",
+            textDecoration: "none",
             fontWeight: "bold",
-            cursor: "pointer",
           }}
         >
-          Become a Seller
-        </button>
+          ✨ Custom Order
+        </a>
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "25px",
+          marginTop: "60px",
+          flexWrap: "wrap",
+        }}
+      >
+        <div>🚚 Free Delivery</div>
+        <div>⭐ Premium Quality</div>
+        <div>🧶 Handmade with Love</div>
+        <div>💛 Trusted Marketplace</div>
       </div>
     </section>
   );
