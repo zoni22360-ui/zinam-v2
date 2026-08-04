@@ -1,14 +1,17 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/home/Hero";
 import Categories from "@/components/home/Categories";
+
 import FeaturedProducts from "@/components/home/FeaturedProducts";
 import Affiliate from "@/components/home/Affiliate";
 import CustomOrder from "@/components/home/CustomOrder";
+import Features from "@/components/home/Features";
 import Reviews from "@/components/home/Reviews";
 import Stats from "@/components/home/Stats";
 import BecomeSeller from "@/components/home/BecomeSeller";
 import FAQ from "@/components/home/FAQ";
 import Footer from "@/components/Footer";
+
 export default function Home() {
   return (
     <main
@@ -19,6 +22,8 @@ export default function Home() {
     >
       <Navbar />
       <Hero />
+     <Features />
+
      <Categories />
      <FeaturedProducts />
      <Affiliate />
@@ -28,6 +33,7 @@ export default function Home() {
     <BecomeSeller />
     <FAQ />
    <Footer />
+
  </main>
 
 
