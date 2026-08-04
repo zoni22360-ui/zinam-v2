@@ -19,7 +19,8 @@ export default function Navbar() {
           fontSize: "32px",
           fontWeight: "bold",
           margin: 0,
-        }}
+          marginRight: "35px",        
+}}
       >
         Zinam
       </h1>
@@ -27,7 +28,7 @@ export default function Navbar() {
       <nav
         style={{
           display: "flex",
-          gap: "25px",
+          gap: "35px",
           alignItems: "center",
         }}
       >
