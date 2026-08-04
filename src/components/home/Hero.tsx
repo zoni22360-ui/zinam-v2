@@ -91,7 +91,7 @@ export default function Hero() {
           flexWrap: "wrap",
         }}
       >
-        <div>🚚 Free Delivery</div>
+        <div>🚚  Delivery nationwide </div>
         <div>⭐ Premium Quality</div>
         <div>🧶 Handmade with Love</div>
         <div>💛 Trusted Marketplace</div>
