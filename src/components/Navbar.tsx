@@ -17,7 +17,7 @@ export default function Navbar() {
         <nav className="hidden md:flex gap-8 items-center">
           <a href="/">Home</a>
           <a href="/shop">Shop</a>
-          <a href="#">Categories</a>
+          <a href="/categories">Categories</a>
           <a href="#">Become Seller</a>
           <a href="#">Contact</a>
 
