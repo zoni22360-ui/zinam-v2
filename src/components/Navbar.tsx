@@ -1,106 +1,72 @@
+"use client";
+
+import { useState } from "react";
+
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <header
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        padding: "20px 40px",
-        background: "#000000",
-        borderBottom: "1px solid #D4AF37",
-        position: "sticky",
-        top: 0,
-        zIndex: 1000,
-      }}
-    >
-      <h1
-        style={{
-          color: "#D4AF37",
-          fontSize: "32px",
-          fontWeight: "bold",
-          margin: 0,
-          marginRight: "35px",        
-}}
-      >
-        Zinam
-      </h1>
+    <header className="sticky top-0 z-50 bg-black border-b border-[#D4AF37]">
 
-      <nav
-        style={{
-          display: "flex",
-          gap: "35px",
-          alignItems: "center",
-        }}
-      >
-        <a
-          href="/"
-          style={{
-            color: "white",
-            textDecoration: "none",
-            fontWeight: "bold",
-          }}
-        >
-          Home
-        </a>
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-5 py-4">
 
-        <a
-          href="/shop"
-          style={{
-            color: "white",
-            textDecoration: "none",
-            fontWeight: "bold",
-          }}
-        >
-          Shop
-        </a>
+        <h1 className="text-3xl font-bold text-[#D4AF37]">
+          Zinam
+        </h1>
 
-        <a
-          href="#"
-          style={{
-            color: "white",
-            textDecoration: "none",
-            fontWeight: "bold",
-          }}
-        >
-          Categories
-        </a>
+        <nav className="hidden md:flex gap-8 items-center">
+          <a href="/">Home</a>
+          <a href="/shop">Shop</a>
+          <a href="#">Categories</a>
+          <a href="#">Become Seller</a>
+          <a href="#">Contact</a>
 
-        <a
-          href="#"
-          style={{
-            color: "white",
-            textDecoration: "none",
-            fontWeight: "bold",
-          }}
-        >
-          Become Seller
-        </a>
+          <button>
+            Login
+          </button>
+        </nav>
 
-        <a
-          href="#"
-          style={{
-            color: "white",
-            textDecoration: "none",
-            fontWeight: "bold",
-          }}
-        >
-          Contact
-        </a>
+       <button
+  className="md:hidden text-white text-3xl"
+  onClick={() => {
+    alert("Menu Clicked");
+    setOpen(!open);
+  }}
+>
+  ☰
+</button>
 
-        <button
-          style={{
-            background: "#D4AF37",
-            color: "#000",
-            border: "none",
-            padding: "10px 18px",
-            borderRadius: "10px",
-            fontWeight: "bold",
-            cursor: "pointer",
-          }}
-        >
-          Login
-        </button>
-      </nav>
+      </div>
+
+      {open && (
+  <div className="md:hidden bg-black border-t border-[#D4AF37] flex flex-col p-4 space-y-4">
+
+    <a href="/" className="text-white hover:text-[#D4AF37]">
+      Home
+    </a>
+
+    <a href="/shop" className="text-white hover:text-[#D4AF37]">
+      Shop
+    </a>
+
+    <a href="#" className="text-white hover:text-[#D4AF37]">
+      Categories
+    </a>
+
+    <a href="#" className="text-white hover:text-[#D4AF37]">
+      Become Seller
+    </a>
+
+    <a href="#" className="text-white hover:text-[#D4AF37]">
+      Contact
+    </a>
+
+    <button className="bg-[#D4AF37] text-black font-bold rounded-lg py-2">
+      Login
+    </button>
+
+  </div>
+)}
     </header>
   );
 }

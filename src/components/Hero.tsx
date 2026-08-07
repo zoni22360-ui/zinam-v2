@@ -1,105 +1,38 @@
 export default function Hero() {
   return (
-    <section
-      style={{
-        minHeight: "90vh",
-        background: "#0D0D0D",
-        color: "#FFFFFF",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        textAlign: "center",
-        padding: "20px",
-      }}
-    >
-      <p
-        style={{
-          color: "#D4AF37",
-          letterSpacing: "3px",
-          fontSize: "16px",
-          marginBottom: "15px",
-        }}
-      >
+    <section className="min-h-[90vh] bg-[#0D0D0D] text-white flex flex-col justify-center items-center text-center px-6 py-16">
+
+      <p className="text-[#D4AF37] tracking-[4px] text-sm md:text-base mb-4">
         ✨ HANDMADE WITH LOVE ✨
       </p>
 
-      <h1
-        style={{
-          fontSize: "58px",
-          color: "#D4AF37",
-          margin: "0",
-          fontWeight: "bold",
-        }}
-      >
+      <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#D4AF37]">
         Zinam Marketplace
       </h1>
 
-      <h2
-        style={{
-          fontSize: "28px",
-          marginTop: "20px",
-          color: "#FFFFFF",
-          maxWidth: "700px",
-          lineHeight: "1.5",
-        }}
-      >
+      <h2 className="mt-6 max-w-3xl text-xl sm:text-2xl md:text-3xl font-semibold">
         Premium Handmade Crochet & Digital Products Marketplace
       </h2>
 
-      <p
-        style={{
-          color: "#CCCCCC",
-          maxWidth: "700px",
-          fontSize: "18px",
-          lineHeight: "1.8",
-          marginTop: "20px",
-        }}
-      >
+      <p className="mt-6 max-w-3xl text-gray-300 text-base sm:text-lg leading-8">
         Discover unique handmade crochet products, premium digital templates,
         gifts, and creative collections crafted with love by talented sellers.
       </p>
 
-      <div
-        style={{
-          display: "flex",
-          gap: "15px",
-          marginTop: "40px",
-          flexWrap: "wrap",
-          justifyContent: "center",
-        }}
-      >
-        <button
-          style={{
-            background: "#D4AF37",
-            color: "#000",
-            padding: "16px 35px",
-            border: "none",
-            borderRadius: "12px",
-            fontSize: "18px",
-            fontWeight: "bold",
-            cursor: "pointer",
-          }}
-        >
+      <div className="mt-10 flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center">
+        <button className="bg-[#D4AF37] text-black px-8 py-4 rounded-xl font-bold hover:scale-105 transition">
           🛍 Explore Store
         </button>
 
-        <button
-          style={{
-            background: "transparent",
-            color: "#D4AF37",
-            padding: "16px 35px",
-            border: "2px solid #D4AF37",
-            borderRadius: "12px",
-            fontSize: "18px",
-            fontWeight: "bold",
-            cursor: "pointer",
-          }}
-        >
+        <button className="border-2 border-[#D4AF37] text-[#D4AF37] px-8 py-4 rounded-xl font-bold hover:bg-[#D4AF37] hover:text-black transition">
           Become a Seller
         </button>
       </div>
+
     </section>
   );
 }
+
+
+
 
