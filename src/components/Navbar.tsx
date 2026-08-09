@@ -1,90 +1,88 @@
 "use client";
+
 import { useState } from "react";
-export default function Navbar() { const [open, setOpen] = useState(false);
-const closeMenu = () => { setOpen(false); };
-return ( 
-<div className="max-w-7xl mx-auto flex items-center justify-between px-5 py-4">
+import Link from "next/link";
 
-    <a href="/" className="text-3xl font-bold text-[#D4AF37]">
-      Zinam
-    </a>
+export default function Navbar() {
+  const [open, setOpen] = useState(false);
 
-    <nav className="hidden md:flex gap-8 items-center text-white">
+  const closeMenu = () => {
+    setOpen(false);
+  };
 
-      <a href="/" className="hover:text-[#D4AF37] transition">
-        Home
-      </a>
+  return (
+    <header className="sticky top-0 z-50 bg-black border-b border-[#D4AF37]">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-5 py-4">
+        <Link href="/" className="text-3xl font-bold text-[#D4AF37]">
+          Zinam
+        </Link>
 
-      <a href="/shop" className="hover:text-[#D4AF37] transition">
-        Shop
-      </a>
+        <nav className="hidden md:flex gap-8 items-center text-white">
+          <Link href="/" className="hover:text-[#D4AF37] transition">
+            Home
+          </Link>
 
-      <a href="/categories" className="hover:text-[#D4AF37] transition">
-        Categories
-      </a>
+          <Link href="/shop" className="hover:text-[#D4AF37] transition">
+            Shop
+          </Link>
 
-      <a href="#" className="hover:text-[#D4AF37] transition">
-        Become Seller
-      </a>
+          <Link href="/categories" className="hover:text-[#D4AF37] transition">
+            Categories
+          </Link>
 
-      <a href="#" className="hover:text-[#D4AF37] transition">
-        Contact
-      </a>
+          <Link href="#" className="hover:text-[#D4AF37] transition">
+            Become Seller
+          </Link>
 
-      <button className="bg-[#D4AF37] text-black font-bold px-5 py-2 rounded-lg">
-        Login
-      </button>
+          <Link href="#" className="hover:text-[#D4AF37] transition">
+            Contact
+          </Link>
 
-    </nav>
-
-    <button
-      type="button"
-      aria-label="Open menu"
-      aria-expanded={open}
-      onClick={() => setOpen(!open)}
-      className="md:hidden text-white text-3xl p-2 rounded-lg"
-    >
-      {open ? "✕" : "☰"}
-    </button>
-
-  </div>
-
-  {open && (
-    <div className="md:hidden bg-[#0D0D0D] border-t border-[#D4AF37]/40 px-5 py-5">
-
-      <nav className="flex flex-col">
-
-        <a href="/" onClick={closeMenu} className="text-white py-4 border-b border-white/10">
-          Home
-        </a>
-
-        <a href="/shop" onClick={closeMenu} className="text-white py-4 border-b border-white/10">
-          Shop
-        </a>
-
-        <a href="/categories" onClick={closeMenu} className="text-white py-4 border-b border-white/10">
-          Categories
-        </a>
-
-        <a href="#" onClick={closeMenu} className="text-white py-4 border-b border-white/10">
-          Become Seller
-        </a>
-
-        <a href="#" onClick={closeMenu} className="text-white py-4 border-b border-white/10">
-          Contact
-        </a>
+          <button type="button" className="bg-[#D4AF37] text-black font-bold px-5 py-2 rounded-lg">
+            Login
+          </button>
+        </nav>
 
         <button
-          onClick={closeMenu}
-          className="mt-5 bg-[#D4AF37] text-black font-bold rounded-xl py-3"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded={open}
+          onClick={() => setOpen(!open)}
+          className="md:hidden text-white text-3xl p-2 rounded-lg"
         >
-          Login
+          {open ? "✕" : "☰"}
         </button>
+      </div>
 
-      </nav>
+      {open && (
+        <div className="md:hidden bg-[#0D0D0D] border-t border-[#D4AF37]/40 px-5 py-5">
+          <nav className="flex flex-col">
+            <Link href="/" onClick={closeMenu} className="text-white py-4 border-b border-white/10">
+              Home
+            </Link>
 
-    </div>
-  )}
+            <Link href="/shop" onClick={closeMenu} className="text-white py-4 border-b border-white/10">
+              Shop
+            </Link>
 
-</header>
-); }
+            <Link href="/categories" onClick={closeMenu} className="text-white py-4 border-b border-white/10">
+              Categories
+            </Link>
+
+            <Link href="#" onClick={closeMenu} className="text-white py-4 border-b border-white/10">
+              Become Seller
+            </Link>
+
+            <Link href="#" onClick={closeMenu} className="text-white py-4 border-b border-white/10">
+              Contact
+            </Link>
+
+            <button type="button" onClick={closeMenu} className="mt-5 bg-[#D4AF37] text-black font-bold rounded-xl py-3">
+              Login
+            </button>
+          </nav>
+        </div>
+      )}
+    </header>
+  );
+}
