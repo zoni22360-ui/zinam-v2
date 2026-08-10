@@ -25,7 +25,7 @@ export default function Features() {
   return (
     <section
       style={{
-        background: "#111111",
+        background: "#FFF9F1",
         padding: "80px 20px",
         color: "white",
       }}
@@ -39,7 +39,7 @@ export default function Features() {
         <h2
           style={{
             textAlign: "center",
-            color: "#D4AF37",
+            color: "#78B9A5",
             fontSize: "42px",
             marginBottom: "50px",
           }}
@@ -58,8 +58,8 @@ export default function Features() {
             <div
               key={item.title}
               style={{
-                background: "#1A1A1A",
-                border: "1px solid #D4AF37",
+                background: "#FFFFFF",
+                border: "1px solid #78B9A5",
                 borderRadius: "16px",
                 padding: "30px",
                 textAlign: "center",
@@ -69,7 +69,7 @@ export default function Features() {
 
               <h3
                 style={{
-                  color: "#D4AF37",
+                  color: "#78B9A5",
                   marginTop: "20px",
                 }}
               >
@@ -78,7 +78,7 @@ export default function Features() {
 
               <p
                 style={{
-                  color: "#CCCCCC",
+                  color: "#5F756D",
                   lineHeight: "1.6",
                 }}
               >

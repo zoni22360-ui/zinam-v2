@@ -2,7 +2,7 @@ export default function CustomOrder() {
   return (
     <section
       style={{
-        background: "#0D0D0D",
+        background: "#F8FCF9",
         color: "white",
         padding: "80px 20px",
       }}
@@ -11,15 +11,15 @@ export default function CustomOrder() {
         style={{
           maxWidth: "900px",
           margin: "auto",
-          background: "#1A1A1A",
+          background: "#FFFFFF",
           padding: "35px",
           borderRadius: "18px",
-          border: "1px solid #D4AF37",
+          border: "1px solid #78B9A5",
         }}
       >
         <h2
           style={{
-            color: "#D4AF37",
+            color: "#78B9A5",
             textAlign: "center",
             fontSize: "40px",
             marginBottom: "15px",
@@ -31,7 +31,7 @@ export default function CustomOrder() {
         <p
           style={{
             textAlign: "center",
-            color: "#CCCCCC",
+            color: "#5F756D",
             marginBottom: "35px",
           }}
         >
@@ -91,7 +91,7 @@ export default function CustomOrder() {
           style={{
             width: "100%",
             padding: "16px",
-            background: "#D4AF37",
+            background: "#78B9A5",
             color: "#000",
             border: "none",
             borderRadius: "12px",

@@ -17,7 +17,7 @@ export default function Reviews() {
   return (
     <section
       style={{
-        background: "#111111",
+        background: "#FFF9F1",
         color: "white",
         padding: "80px 20px",
       }}
@@ -25,7 +25,7 @@ export default function Reviews() {
       <h2
         style={{
           textAlign: "center",
-          color: "#D4AF37",
+          color: "#78B9A5",
           fontSize: "42px",
           marginBottom: "50px",
         }}
@@ -46,8 +46,8 @@ export default function Reviews() {
           <div
             key={item.name}
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #D4AF37",
+              background: "#FFFFFF",
+              border: "1px solid #78B9A5",
               borderRadius: "16px",
               padding: "25px",
             }}
@@ -56,13 +56,13 @@ export default function Reviews() {
               ⭐⭐⭐⭐⭐
             </div>
 
-            <p style={{ color: "#CCCCCC", lineHeight: "1.7" }}>
+            <p style={{ color: "#5F756D", lineHeight: "1.7" }}>
               "{item.review}"
             </p>
 
             <h3
               style={{
-                color: "#D4AF37",
+                color: "#78B9A5",
                 marginTop: "20px",
               }}
             >

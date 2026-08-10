@@ -62,7 +62,7 @@ export default function ShopPage() {
   return (
     <main
       style={{
-        background: "#0D0D0D",
+        background: "#F8FCF9",
         color: "white",
         minHeight: "100vh",
         padding: "60px 20px",
@@ -76,7 +76,7 @@ export default function ShopPage() {
       >
         <h1
           style={{
-            color: "#D4AF37",
+            color: "#78B9A5",
             textAlign: "center",
             fontSize: "48px",
             marginBottom: "10px",
@@ -88,7 +88,7 @@ export default function ShopPage() {
         <p
           style={{
             textAlign: "center",
-            color: "#CCCCCC",
+            color: "#5F756D",
             marginBottom: "40px",
           }}
         >
@@ -103,8 +103,8 @@ export default function ShopPage() {
             width: "100%",
             padding: "16px",
             borderRadius: "12px",
-            border: "1px solid #D4AF37",
-            background: "#1A1A1A",
+            border: "1px solid #78B9A5",
+            background: "#FFFFFF",
             color: "white",
             marginBottom: "40px",
             boxSizing: "border-box",
@@ -112,7 +112,7 @@ export default function ShopPage() {
         />
 
         {loading && (
-          <p style={{ textAlign: "center", color: "#D4AF37" }}>
+          <p style={{ textAlign: "center", color: "#78B9A5" }}>
             Loading products...
           </p>
         )}
@@ -127,7 +127,7 @@ export default function ShopPage() {
           <p
             style={{
               textAlign: "center",
-              color: "#CCCCCC",
+              color: "#5F756D",
             }}
           >
             No products found.
@@ -179,7 +179,7 @@ export default function ShopPage() {
                 {product.badge && (
                   <span
                     style={{
-                      color: "#D4AF37",
+                      color: "#78B9A5",
                       fontSize: "13px",
                     }}
                   >
@@ -226,7 +226,7 @@ export default function ShopPage() {
                 >
                   <strong
                     style={{
-                      color: "#D4AF37",
+                      color: "#78B9A5",
                       fontSize: "22px",
                     }}
                   >

@@ -2,7 +2,7 @@ export default function FAQ() {
   return (
     <section
       style={{
-        background: "#0D0D0D",
+        background: "#F8FCF9",
         color: "white",
         padding: "80px 20px",
       }}
@@ -10,7 +10,7 @@ export default function FAQ() {
       <h2
         style={{
           textAlign: "center",
-          color: "#D4AF37",
+          color: "#78B9A5",
           fontSize: "42px",
           marginBottom: "40px",
         }}
@@ -25,21 +25,21 @@ export default function FAQ() {
           lineHeight: "2",
         }}
       >
-        <h3 style={{ color: "#D4AF37" }}>
+        <h3 style={{ color: "#78B9A5" }}>
           How can I place a custom order?
         </h3>
         <p>
           Fill out the custom order form and submit your request.
         </p>
 
-        <h3 style={{ color: "#D4AF37", marginTop: "25px" }}>
+        <h3 style={{ color: "#78B9A5", marginTop: "25px" }}>
           Do you deliver all over Pakistan?
         </h3>
         <p>
           Yes, we deliver nationwide.
         </p>
 
-        <h3 style={{ color: "#D4AF37", marginTop: "25px" }}>
+        <h3 style={{ color: "#78B9A5", marginTop: "25px" }}>
           Can I become a seller?
         </h3>
         <p>

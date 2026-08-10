@@ -26,7 +26,7 @@ export default function FeaturedProducts() {
   return (
     <section
       style={{
-        background: "#0D0D0D",
+        background: "#F8FCF9",
         color: "white",
         padding: "80px 20px",
       }}
@@ -35,7 +35,7 @@ export default function FeaturedProducts() {
         <h2
           style={{
             textAlign: "center",
-            color: "#D4AF37",
+            color: "#78B9A5",
             fontSize: "42px",
             marginBottom: "50px",
           }}
@@ -54,8 +54,8 @@ export default function FeaturedProducts() {
             <div
               key={product.name}
               style={{
-                background: "#1A1A1A",
-                border: "1px solid #D4AF37",
+                background: "#FFFFFF",
+                border: "1px solid #78B9A5",
                 borderRadius: "18px",
                 padding: "20px",
                 textAlign: "center",
@@ -63,7 +63,7 @@ export default function FeaturedProducts() {
             >
               <div
                 style={{
-                  background: "#D4AF37",
+                  background: "#78B9A5",
                   color: "#000",
                   display: "inline-block",
                   padding: "4px 10px",
@@ -80,7 +80,7 @@ export default function FeaturedProducts() {
                 {product.image}
               </div>
 
-              <h3 style={{ color: "#D4AF37" }}>{product.name}</h3>
+              <h3 style={{ color: "#78B9A5" }}>{product.name}</h3>
 
               <p>{product.rating}</p>
 
@@ -96,7 +96,7 @@ export default function FeaturedProducts() {
               >
                 <button
                   style={{
-                    background: "#D4AF37",
+                    background: "#78B9A5",
                     color: "#000",
                     border: "none",
                     padding: "10px 16px",
@@ -111,8 +111,8 @@ export default function FeaturedProducts() {
                 <button
                   style={{
                     background: "transparent",
-                    color: "#D4AF37",
-                    border: "1px solid #D4AF37",
+                    color: "#78B9A5",
+                    border: "1px solid #78B9A5",
                     padding: "10px 16px",
                     borderRadius: "10px",
                     cursor: "pointer",

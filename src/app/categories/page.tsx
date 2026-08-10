@@ -47,16 +47,16 @@ export default function CategoriesPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#0D0D0D] text-white">
+    <main className="min-h-screen bg-[#F8FCF9] text-[#24433A]">
 
       {/* Hero */}
-      <section className="px-6 py-20 text-center border-b border-[#D4AF37]/20">
+      <section className="px-6 py-20 text-center border-b border-[#78B9A5]/20">
 
-        <p className="text-[#D4AF37] font-semibold tracking-[3px] text-sm mb-4">
+        <p className="text-[#78B9A5] font-semibold tracking-[3px] text-sm mb-4">
           ZINAM MARKETPLACE
         </p>
 
-        <h1 className="text-4xl md:text-6xl font-bold text-[#D4AF37] mb-5">
+        <h1 className="text-4xl md:text-6xl font-bold text-[#78B9A5] mb-5">
           Explore Categories
         </h1>
 
@@ -80,13 +80,13 @@ export default function CategoriesPage() {
               className="group"
             >
 
-              <div className="h-full bg-[#151515] border border-white/10 rounded-2xl p-7 transition-all duration-300 hover:-translate-y-2 hover:border-[#D4AF37] hover:shadow-[0_10px_35px_rgba(212,175,55,0.12)]">
+              <div className="h-full bg-[#FFFFFF] border border-white/10 rounded-2xl p-7 transition-all duration-300 hover:-translate-y-2 hover:border-[#78B9A5] hover:shadow-[0_10px_35px_rgba(212,175,55,0.12)]">
 
                 <div className="text-5xl mb-6">
                   {item.icon}
                 </div>
 
-                <h2 className="text-xl font-bold text-white group-hover:text-[#D4AF37] transition mb-3">
+                <h2 className="text-xl font-bold text-[#24433A] group-hover:text-[#78B9A5] transition mb-3">
                   {item.title}
                 </h2>
 
@@ -94,7 +94,7 @@ export default function CategoriesPage() {
                   {item.description}
                 </p>
 
-                <div className="mt-6 text-[#D4AF37] text-sm font-semibold">
+                <div className="mt-6 text-[#78B9A5] text-sm font-semibold">
                   Explore →
                 </div>
 
@@ -111,9 +111,9 @@ export default function CategoriesPage() {
       {/* Bottom CTA */}
       <section className="px-6 pb-20">
 
-        <div className="max-w-5xl mx-auto rounded-3xl border border-[#D4AF37]/30 bg-[#151515] p-10 text-center">
+        <div className="max-w-5xl mx-auto rounded-3xl border border-[#78B9A5]/30 bg-[#FFFFFF] p-10 text-center">
 
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#24433A] mb-4">
             Can't find what you're looking for?
           </h2>
 
@@ -123,7 +123,7 @@ export default function CategoriesPage() {
 
           <Link
             href="/shop"
-            className="inline-block bg-[#D4AF37] text-black font-bold px-7 py-3 rounded-xl hover:scale-105 transition"
+            className="inline-block bg-[#78B9A5] text-[#24433A] font-bold px-7 py-3 rounded-xl hover:scale-105 transition"
           >
             Visit Shop
           </Link>

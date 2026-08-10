@@ -25,7 +25,7 @@ export default function Categories() {
   return (
     <section
       style={{
-        background: "#111111",
+        background: "#FFF9F1",
         padding: "80px 20px",
         color: "white",
       }}
@@ -33,7 +33,7 @@ export default function Categories() {
       <h2
         style={{
           textAlign: "center",
-          color: "#D4AF37",
+          color: "#78B9A5",
           fontSize: "42px",
           marginBottom: "50px",
         }}
@@ -55,7 +55,7 @@ export default function Categories() {
             key={item.title}
             style={{
               background: "#1b1b1b",
-              border: "1px solid #D4AF37",
+              border: "1px solid #78B9A5",
               borderRadius: "16px",
               padding: "30px",
               textAlign: "center",
@@ -67,7 +67,7 @@ export default function Categories() {
 
             <h3
               style={{
-                color: "#D4AF37",
+                color: "#78B9A5",
                 marginTop: "20px",
               }}
             >
@@ -76,7 +76,7 @@ export default function Categories() {
 
             <p
               style={{
-                color: "#CCCCCC",
+                color: "#5F756D",
               }}
             >
               {item.desc}

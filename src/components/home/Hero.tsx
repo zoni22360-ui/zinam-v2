@@ -3,7 +3,7 @@ export default function Hero() {
     <section
       style={{
         background:
-          "linear-gradient(135deg,#0D0D0D 0%, #1A1A1A 50%, #000000 100%)",
+          "linear-gradient(135deg,#F8FCF9 0%, #FFFFFF 50%, #24433A 100%)",
         color: "white",
         padding: "100px 20px",
         textAlign: "center",
@@ -11,7 +11,7 @@ export default function Hero() {
     >
       <p
         style={{
-          color: "#D4AF37",
+          color: "#78B9A5",
           fontWeight: "bold",
           letterSpacing: "2px",
           marginBottom: "15px",
@@ -23,7 +23,7 @@ export default function Hero() {
       <h1
         style={{
           fontSize: "56px",
-          color: "#D4AF37",
+          color: "#78B9A5",
           marginBottom: "20px",
         }}
       >
@@ -34,7 +34,7 @@ export default function Hero() {
         style={{
           maxWidth: "700px",
           margin: "auto",
-          color: "#CCCCCC",
+          color: "#5F756D",
           fontSize: "18px",
           lineHeight: "1.8",
         }}
@@ -56,7 +56,7 @@ export default function Hero() {
         <a
           href="/shop"
           style={{
-            background: "#D4AF37",
+            background: "#78B9A5",
             color: "#000",
             padding: "15px 28px",
             borderRadius: "12px",
@@ -70,8 +70,8 @@ export default function Hero() {
         <a
           href="#custom-order"
           style={{
-            border: "2px solid #D4AF37",
-            color: "#D4AF37",
+            border: "2px solid #78B9A5",
+            color: "#78B9A5",
             padding: "15px 28px",
             borderRadius: "12px",
             textDecoration: "none",

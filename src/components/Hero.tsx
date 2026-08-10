@@ -1,12 +1,12 @@
 export default function Hero() {
   return (
-    <section className="min-h-[90vh] bg-[#0D0D0D] text-white flex flex-col justify-center items-center text-center px-6 py-16">
+    <section className="min-h-[90vh] bg-[#F8FCF9] text-[#24433A] flex flex-col justify-center items-center text-center px-6 py-16">
 
-      <p className="text-[#D4AF37] tracking-[4px] text-sm md:text-base mb-4">
+      <p className="text-[#78B9A5] tracking-[4px] text-sm md:text-base mb-4">
         ✨ HANDMADE WITH LOVE ✨
       </p>
 
-      <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#D4AF37]">
+      <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#78B9A5]">
         Zinam Marketplace
       </h1>
 
@@ -20,11 +20,11 @@ export default function Hero() {
       </p>
 
       <div className="mt-10 flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center">
-        <button className="bg-[#D4AF37] text-black px-8 py-4 rounded-xl font-bold hover:scale-105 transition">
+        <button className="bg-[#78B9A5] text-[#24433A] px-8 py-4 rounded-xl font-bold hover:scale-105 transition">
           🛍 Explore Store
         </button>
 
-        <button className="border-2 border-[#D4AF37] text-[#D4AF37] px-8 py-4 rounded-xl font-bold hover:bg-[#D4AF37] hover:text-black transition">
+        <button className="border-2 border-[#78B9A5] text-[#78B9A5] px-8 py-4 rounded-xl font-bold hover:bg-[#78B9A5] hover:text-[#24433A] transition">
           Become a Seller
         </button>
       </div>
