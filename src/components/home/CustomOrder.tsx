@@ -117,6 +117,6 @@ const inputStyle = {
   borderRadius: "10px",
   border: "1px solid #555",
   background: "#FFFFFF",
-  color: "white",
+  color: "#24433A",
 };
 
