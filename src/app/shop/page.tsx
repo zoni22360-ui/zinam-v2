@@ -145,7 +145,7 @@ export default function ShopPage() {
             <article
               key={product.id}
               style={{
-                background: "#171717",
+                background: "#FFFFFF",
                 border: "1px solid #333",
                 borderRadius: "16px",
                 overflow: "hidden",
@@ -154,7 +154,7 @@ export default function ShopPage() {
               <div
                 style={{
                   height: "240px",
-                  background: "#222",
+                  background: "#F1F8F5",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -190,7 +190,7 @@ export default function ShopPage() {
                 <h2
                   style={{
                     margin: "8px 0",
-                    color: "white",
+                    color: "#24433A",
                     fontSize: "22px",
                   }}
                 >
