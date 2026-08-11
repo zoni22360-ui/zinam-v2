@@ -44,10 +44,13 @@ export default function CustomOrder() {
         />
 
         <input
+          type="tel"
+          inputMode="numeric"
+          pattern="[0-9+ ]*"
+          maxLength={15}
           placeholder="WhatsApp Number"
           style={inputStyle}
         />
-
         <input
           placeholder="Product Name"
           style={inputStyle}
