@@ -113,7 +113,7 @@ const inputStyle = {
   marginBottom: "15px",
   borderRadius: "10px",
   border: "1px solid #555",
-  background: "#111",
+  background: "#FFFFFF",
   color: "white",
 };
 

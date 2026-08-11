@@ -60,7 +60,7 @@ export default function CategoriesPage() {
           Explore Categories
         </h1>
 
-        <p className="max-w-2xl mx-auto text-gray-400 text-base md:text-lg leading-8">
+        <p className="max-w-2xl mx-auto text-[#24433A] text-base md:text-lg leading-8">
           Discover handmade treasures, beautiful gifts, digital products
           and unique creations from talented sellers across Pakistan.
         </p>
@@ -90,7 +90,7 @@ export default function CategoriesPage() {
                   {item.title}
                 </h2>
 
-                <p className="text-gray-400 text-sm leading-6">
+                <p className="text-[#24433A] text-sm leading-6">
                   {item.description}
                 </p>
 
@@ -117,7 +117,7 @@ export default function CategoriesPage() {
             Can't find what you're looking for?
           </h2>
 
-          <p className="text-gray-400 mb-7">
+          <p className="text-[#24433A] mb-7">
             Browse our complete marketplace or request a custom handmade order.
           </p>
 

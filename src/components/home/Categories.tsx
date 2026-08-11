@@ -54,7 +54,7 @@ export default function Categories() {
           <div
             key={item.title}
             style={{
-              background: "#1b1b1b",
+              background: "#FFFFFF",
               border: "1px solid #78B9A5",
               borderRadius: "16px",
               padding: "30px",

@@ -14,7 +14,7 @@ export default function Hero() {
         Premium Handmade Crochet & Digital Products Marketplace
       </h2>
 
-      <p className="mt-6 max-w-3xl text-gray-300 text-base sm:text-lg leading-8">
+      <p className="mt-6 max-w-3xl text-[#24433A] text-base sm:text-lg leading-8">
         Discover unique handmade crochet products, premium digital templates,
         gifts, and creative collections crafted with love by talented sellers.
       </p>
