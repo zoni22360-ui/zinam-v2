@@ -63,7 +63,7 @@ export default function ShopPage() {
     <main
       style={{
         background: "#F8FCF9",
-        color: "white",
+        color: "#24433A",
         minHeight: "100vh",
         padding: "60px 20px",
       }}
@@ -105,7 +105,7 @@ export default function ShopPage() {
             borderRadius: "12px",
             border: "1px solid #78B9A5",
             background: "#FFFFFF",
-            color: "white",
+            color: "#24433A",
             marginBottom: "40px",
             boxSizing: "border-box",
           }}
@@ -146,7 +146,7 @@ export default function ShopPage() {
               key={product.id}
               style={{
                 background: "#FFFFFF",
-                border: "1px solid #333",
+                border: "1px solid #DCECE5",
                 borderRadius: "16px",
                 overflow: "hidden",
               }}
@@ -199,7 +199,7 @@ export default function ShopPage() {
 
                 <p
                   style={{
-                    color: "#BBBBBB",
+                    color: "#5F756D",
                     minHeight: "45px",
                   }}
                 >
