@@ -2,16 +2,16 @@ export default function Footer() {
   return (
     <footer
       style={{
-        background: "#24433A",
-        color: "#5F756D",
+        background: "#3B2923",
+        color: "#7A5A4D",
         padding: "50px 20px",
         textAlign: "center",
-        borderTop: "2px solid #78B9A5",
+        borderTop: "2px solid #C85A36",
       }}
     >
       <h2
         style={{
-          color: "#78B9A5",
+          color: "#C85A36",
           marginBottom: "15px",
         }}
       >
@@ -34,7 +34,7 @@ export default function Footer() {
         © 2026 Zinam Marketplace — All Rights Reserved
       </p>
 
-      <p style={{ color: "#78B9A5", marginTop: "10px" }}>
+      <p style={{ color: "#C85A36", marginTop: "10px" }}>
         Designed with ❤️ by Zoni
       </p>
     </footer>

@@ -26,23 +26,23 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-[#F8FCF9]">
+    <section className="relative overflow-hidden bg-[#FFF7ED]">
       <div className="mx-auto grid min-h-[calc(100vh-76px)] max-w-[1500px] items-stretch lg:grid-cols-1">
 
         {/* Left content */}
         <div className="flex items-center px-7 py-16 sm:px-10 lg:px-14 xl:px-20">
           <div className="mx-auto w-full max-w-6xl text-center lg:mx-0 lg:text-left">
 
-            <p className="mb-5 text-sm font-bold tracking-[0.2em] text-[#78B9A5]">
+            <p className="mb-5 text-sm font-bold tracking-[0.2em] text-[#B85C3A]">
               ✨ PREMIUM HANDMADE MARKETPLACE
             </p>
 
-            <h1 className="text-6xl font-extrabold leading-[1.03] tracking-[-0.045em] text-[#4E927B] sm:text-7xl lg:text-[clamp(4rem,7vw,7rem)]">
+            <h1 className="text-6xl font-serif font-bold leading-[1.03] tracking-[-0.045em] text-[#3B2923] sm:text-7xl lg:text-[clamp(4rem,7vw,7rem)]">
               Welcome to
-              <span className="mt-2 block">Zinam</span>
+              <span className="mt-2 block font-serif italic font-semibold text-[#B85C3A]">Zinam</span>
             </h1>
 
-            <p className="mt-7 max-w-5xl w-full text-lg leading-8 text-[#5F756D] sm:text-xl">
+            <p className="mt-7 max-w-5xl w-full text-lg leading-8 text-[#8A6254] sm:text-xl">
               Discover premium handmade crochet products, digital downloads,
               personalized gifts and support talented small business owners
               from Pakistan.
@@ -51,14 +51,14 @@ export default function Hero() {
             <div className="mt-9 flex flex-col gap-4 sm:flex-row justify-center">
               <a
                 href="/shop"
-                className="rounded-xl bg-[#78B9A5] px-8 py-4 text-center font-bold text-[#17352C] shadow-[0_10px_25px_rgba(120,185,165,0.25)] transition hover:-translate-y-0.5 hover:bg-[#69AD98]"
+                className="rounded-xl bg-[#B85C3A] px-8 py-4 text-center font-bold text-[#17352C] shadow-[0_10px_25px_rgba(120,185,165,0.25)] transition hover:-translate-y-0.5 hover:bg-[#69AD98]"
               >
                 🛍️ Shop Now
               </a>
 
               <a
                 href="#custom-order"
-                className="rounded-xl border-2 border-[#78B9A5] bg-white px-8 py-4 text-center font-bold text-[#4E927B] transition hover:bg-[#F1FAF6]"
+                className="rounded-xl border-2 border-[#B85C3A] bg-white px-8 py-4 text-center font-bold text-[#4E927B] transition hover:bg-[#F1FAF6]"
               >
                 ✨ Custom Order
               </a>
@@ -88,14 +88,14 @@ export default function Hero() {
           ))}
 
           {/* Soft overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#F8FCF9]/20 via-transparent to-[#24433A]/10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#FFF7ED]/20 via-transparent to-[#3B2923]/10" />
 
           {/* Previous */}
           <button
             type="button"
             onClick={previousSlide}
             aria-label="Previous slide"
-            className="absolute left-5 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-2xl text-[#24433A] shadow-lg backdrop-blur transition hover:scale-105 hover:bg-white"
+            className="absolute left-5 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-2xl text-[#3B2923] shadow-lg backdrop-blur transition hover:scale-105 hover:bg-white"
           >
             ‹
           </button>
@@ -105,7 +105,7 @@ export default function Hero() {
             type="button"
             onClick={nextSlide}
             aria-label="Next slide"
-            className="absolute right-5 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-2xl text-[#24433A] shadow-lg backdrop-blur transition hover:scale-105 hover:bg-white"
+            className="absolute right-5 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-2xl text-[#3B2923] shadow-lg backdrop-blur transition hover:scale-105 hover:bg-white"
           >
             ›
           </button>
@@ -120,7 +120,7 @@ export default function Hero() {
                 aria-label={`Go to slide ${index + 1}`}
                 className={`h-2.5 rounded-full transition-all ${
                   index === current
-                    ? "w-8 bg-[#78B9A5]"
+                    ? "w-8 bg-[#B85C3A]"
                     : "w-2.5 bg-[#B8E0D2]"
                 }`}
               />

@@ -9,7 +9,7 @@ export default function Stats() {
   return (
     <section
       style={{
-        background: "#F8FCF9",
+        background: "#FFF7ED",
         color: "white",
         padding: "80px 20px",
       }}
@@ -17,7 +17,7 @@ export default function Stats() {
       <h2
         style={{
           textAlign: "center",
-          color: "#78B9A5",
+          color: "#C85A36",
           fontSize: "42px",
           marginBottom: "50px",
         }}
@@ -39,7 +39,7 @@ export default function Stats() {
             key={item.label}
             style={{
               background: "#FFFFFF",
-              border: "1px solid #78B9A5",
+              border: "1px solid #C85A36",
               borderRadius: "16px",
               padding: "30px",
               textAlign: "center",
@@ -47,7 +47,7 @@ export default function Stats() {
           >
             <h2
               style={{
-                color: "#78B9A5",
+                color: "#C85A36",
                 fontSize: "40px",
                 marginBottom: "10px",
               }}
@@ -57,7 +57,7 @@ export default function Stats() {
 
             <p
               style={{
-                color: "#5F756D",
+                color: "#7A5A4D",
                 fontSize: "18px",
               }}
             >

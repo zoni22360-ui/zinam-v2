@@ -62,8 +62,8 @@ export default function ShopPage() {
   return (
     <main
       style={{
-        background: "#F8FCF9",
-        color: "#24433A",
+        background: "#FFF7ED",
+        color: "#3B2923",
         minHeight: "100vh",
         padding: "60px 20px",
       }}
@@ -76,7 +76,7 @@ export default function ShopPage() {
       >
         <h1
           style={{
-            color: "#78B9A5",
+            color: "#B85C3A",
             textAlign: "center",
             fontSize: "48px",
             marginBottom: "10px",
@@ -88,7 +88,7 @@ export default function ShopPage() {
         <p
           style={{
             textAlign: "center",
-            color: "#5F756D",
+            color: "#8A6254",
             marginBottom: "40px",
           }}
         >
@@ -103,16 +103,16 @@ export default function ShopPage() {
             width: "100%",
             padding: "16px",
             borderRadius: "12px",
-            border: "1px solid #78B9A5",
+            border: "1px solid #B85C3A",
             background: "#FFFFFF",
-            color: "#24433A",
+            color: "#3B2923",
             marginBottom: "40px",
             boxSizing: "border-box",
           }}
         />
 
         {loading && (
-          <p style={{ textAlign: "center", color: "#78B9A5" }}>
+          <p style={{ textAlign: "center", color: "#B85C3A" }}>
             Loading products...
           </p>
         )}
@@ -127,7 +127,7 @@ export default function ShopPage() {
           <p
             style={{
               textAlign: "center",
-              color: "#5F756D",
+              color: "#8A6254",
             }}
           >
             No products found.
@@ -154,7 +154,7 @@ export default function ShopPage() {
               <div
                 style={{
                   height: "240px",
-                  background: "#F1F8F5",
+                  background: "#F2DED2",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -171,7 +171,7 @@ export default function ShopPage() {
                     }}
                   />
                 ) : (
-                  <span style={{ color: "#888" }}>No Image</span>
+                  <span style={{ color: "#8A6254" }}>No Image</span>
                 )}
               </div>
 
@@ -179,7 +179,7 @@ export default function ShopPage() {
                 {product.badge && (
                   <span
                     style={{
-                      color: "#78B9A5",
+                      color: "#B85C3A",
                       fontSize: "13px",
                     }}
                   >
@@ -190,7 +190,7 @@ export default function ShopPage() {
                 <h2
                   style={{
                     margin: "8px 0",
-                    color: "#24433A",
+                    color: "#3B2923",
                     fontSize: "22px",
                   }}
                 >
@@ -199,7 +199,7 @@ export default function ShopPage() {
 
                 <p
                   style={{
-                    color: "#5F756D",
+                    color: "#8A6254",
                     minHeight: "45px",
                   }}
                 >
@@ -208,7 +208,7 @@ export default function ShopPage() {
 
                 <p
                   style={{
-                    color: "#888",
+                    color: "#8A6254",
                     fontSize: "14px",
                   }}
                 >
@@ -226,7 +226,7 @@ export default function ShopPage() {
                 >
                   <strong
                     style={{
-                      color: "#78B9A5",
+                      color: "#B85C3A",
                       fontSize: "22px",
                     }}
                   >
@@ -235,7 +235,7 @@ export default function ShopPage() {
 
                   <span
                     style={{
-                      color: product.stock > 0 ? "#7CFC98" : "#ff6b6b",
+                      color: product.stock > 0 ? "#5C7A63" : "#ff6b6b",
                       fontSize: "14px",
                     }}
                   >

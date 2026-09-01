@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <main
       style={{
-        background: "#F8FCF9",
+        background: "#FFF7ED",
         minHeight: "100vh",
       }}
     >

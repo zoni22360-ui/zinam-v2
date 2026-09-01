@@ -2,7 +2,7 @@ export default function BecomeSeller() {
   return (
     <section
       style={{
-        background: "#FFF9F1",
+        background: "#FFF7ED",
         color: "white",
         padding: "80px 20px",
         textAlign: "center",
@@ -10,7 +10,7 @@ export default function BecomeSeller() {
     >
       <h2
         style={{
-          color: "#78B9A5",
+          color: "#C85A36",
           fontSize: "42px",
           marginBottom: "20px",
         }}
@@ -22,7 +22,7 @@ export default function BecomeSeller() {
         style={{
           maxWidth: "700px",
           margin: "auto",
-          color: "#5F756D",
+          color: "#7A5A4D",
           lineHeight: "1.8",
           fontSize: "18px",
         }}
@@ -34,7 +34,7 @@ export default function BecomeSeller() {
       <button
         style={{
           marginTop: "35px",
-          background: "#78B9A5",
+          background: "#C85A36",
           color: "#000",
           border: "none",
           padding: "16px 35px",

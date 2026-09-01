@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #F8FCF9;
-  --foreground: #24433A;
+  --background: #FFF7ED;
+  --foreground: #3B2923;
   --mint: #B8E0D2;
-  --mint-dark: #78B9A5;
-  --cream: #FFF9F1;
+  --mint-dark: #C85A36;
+  --cream: #FFF7ED;
   --lavender: #DCCEF2;
   --coral: #F3A6A0;
   --gold: #C9A24A;
