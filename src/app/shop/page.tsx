@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 type Product = {
@@ -243,6 +244,7 @@ export default function ShopPage() {
                       ? `${product.stock} in stock`
                       : "Out of stock"}
                   </span>
+                <Link href={`/shop/${product.slug}`} style={{ display: "block", marginTop: "18px", padding: "12px 16px", borderRadius: "10px", background: "#24433A", color: "#FFFFFF", textAlign: "center", textDecoration: "none", fontWeight: "bold" }}>View Product</Link>
                 </div>
               </div>
             </article>
