@@ -1,10 +1,45 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [cartCount, setCartCount] = useState(0);
+
+  useEffect(() => {
+    async function loadCartCount() {
+      try {
+        let sessionId = localStorage.getItem("zinam-cart-session");
+
+        if (!sessionId) {
+          sessionId = crypto.randomUUID();
+          localStorage.setItem("zinam-cart-session", sessionId);
+        }
+
+        const response = await fetch(
+          "/api/cart?sessionId=" + encodeURIComponent(sessionId)
+        );
+
+        if (!response.ok) return;
+
+        const data = await response.json();
+
+        const count =
+          data.items?.reduce(
+            (total: number, item: { quantity: number }) =>
+              total + item.quantity,
+            0
+          ) ?? 0;
+
+        setCartCount(count);
+      } catch (error) {
+        console.error("Navbar cart count error:", error);
+      }
+    }
+
+    loadCartCount();
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 border-b border-[#B8D8CC] bg-[#FFF9F1]">
@@ -28,23 +63,51 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <nav className="hidden items-center gap-8 md:flex">
-          <Link href="/" className="text-[#24433A] hover:text-[#B85C3A]">
+          <Link
+            href="/"
+            className="text-[#24433A] hover:text-[#B85C3A]"
+          >
             Home
           </Link>
 
-          <Link href="/shop" className="text-[#24433A] hover:text-[#B85C3A]">
+          <Link
+            href="/shop"
+            className="text-[#24433A] hover:text-[#B85C3A]"
+          >
             Shop
           </Link>
 
-          <Link href="/categories" className="text-[#24433A] hover:text-[#B85C3A]">
+          <Link
+            href="/cart"
+            className="relative flex items-center gap-1.5 text-[#24433A] hover:text-[#B85C3A]"
+          >
+            <span>🛒 Cart</span>
+
+            {cartCount > 0 && (
+              <span className="flex min-h-5 min-w-5 items-center justify-center rounded-full bg-[#24433A] px-1.5 text-xs font-bold text-white">
+                {cartCount}
+              </span>
+            )}
+          </Link>
+
+          <Link
+            href="/categories"
+            className="text-[#24433A] hover:text-[#B85C3A]"
+          >
             Categories
           </Link>
 
-          <Link href="#" className="text-[#24433A] hover:text-[#B85C3A]">
+          <Link
+            href="#"
+            className="text-[#24433A] hover:text-[#B85C3A]"
+          >
             Become Seller
           </Link>
 
-          <Link href="#" className="text-[#24433A] hover:text-[#B85C3A]">
+          <Link
+            href="#"
+            className="text-[#24433A] hover:text-[#B85C3A]"
+          >
             Contact
           </Link>
 
@@ -87,6 +150,20 @@ export default function Navbar() {
               className="border-b border-[#E6D5CC] py-4 font-medium text-[#24433A]"
             >
               Shop
+            </Link>
+
+            <Link
+              href="/cart"
+              onClick={() => setOpen(false)}
+              className="flex items-center justify-between border-b border-[#E6D5CC] py-4 font-medium text-[#24433A]"
+            >
+              <span>🛒 Cart</span>
+
+              {cartCount > 0 && (
+                <span className="flex min-h-6 min-w-6 items-center justify-center rounded-full bg-[#24433A] px-2 text-xs font-bold text-white">
+                  {cartCount}
+                </span>
+              )}
             </Link>
 
             <Link

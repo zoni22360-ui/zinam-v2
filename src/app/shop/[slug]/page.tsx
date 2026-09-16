@@ -33,6 +33,8 @@ export default function ProductDetailsPage() {
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [addingToCart, setAddingToCart] = useState(false);
+  const [cartMessage, setCartMessage] = useState("");
 
   useEffect(() => {
     if (!slug) return;
@@ -90,6 +92,45 @@ export default function ProductDetailsPage() {
         Product not found.
       </main>
     );
+  }
+
+  async function handleAddToCart() {
+    if (!product || product.stock <= 0 || addingToCart) return;
+
+    try {
+      setAddingToCart(true);
+      setCartMessage("");
+
+      let sessionId = localStorage.getItem("zinam-cart-session");
+
+      if (!sessionId) {
+        sessionId = crypto.randomUUID();
+        localStorage.setItem("zinam-cart-session", sessionId);
+      }
+
+      const response = await fetch("/api/cart", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          sessionId,
+          productId: product.id,
+          quantity: 1,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to add product to cart");
+      }
+
+      setCartMessage("✅ Added to cart");
+    } catch (err) {
+      console.error(err);
+      setCartMessage(err instanceof Error ? err.message : "Unable to add to cart.");
+    } finally {
+      setAddingToCart(false);
+    }
   }
 
   const price = product.salePrice ?? product.price;
@@ -263,6 +304,7 @@ export default function ProductDetailsPage() {
           </div>
 
           <button
+            onClick={handleAddToCart}
             disabled={product.stock <= 0}
             style={{
               width: "100%",
