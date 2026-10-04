@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 type CartItem = {
   id: string;
@@ -22,6 +23,7 @@ type Cart = {
 };
 
 export default function CartPage() {
+  const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [cart, setCart] = useState<Cart | null>(null);
   const [error, setError] = useState("");
@@ -356,13 +358,14 @@ export default function CartPage() {
 
               <button
                 type="button"
+                onClick={() => router.push("/checkout")}
                 className="mt-6 w-full rounded-xl bg-[#24433A] px-5 py-3 font-bold text-white"
               >
                 Proceed to Checkout
               </button>
 
               <p className="mt-3 text-center text-xs text-[#8A6254]">
-                Checkout will be connected next.
+                Secure checkout • Cash on Delivery
               </p>
             </aside>
           </div>

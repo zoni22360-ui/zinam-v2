@@ -91,6 +91,24 @@ export async function POST(req: Request) {
       update: {},
     });
 
+    const existingItem = await prisma.cartItem.findUnique({
+      where: {
+        cartId_productId: {
+          cartId: cart.id,
+          productId,
+        },
+      },
+    });
+
+    const newQuantity = (existingItem?.quantity ?? 0) + quantity;
+
+    if (product.stock < newQuantity) {
+      return NextResponse.json(
+        { error: "Not enough stock" },
+        { status: 400 }
+      );
+    }
+
     const item = await prisma.cartItem.upsert({
       where: {
         cartId_productId: {
@@ -104,7 +122,7 @@ export async function POST(req: Request) {
         quantity,
       },
       update: {
-        quantity,
+        quantity: newQuantity,
       },
       include: {
         product: true,

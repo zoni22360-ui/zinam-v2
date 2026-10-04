@@ -19,70 +19,71 @@ enum ProductStatus {
 }
 
 model Category {
-  id          String    @id @default(cuid())
+  id          String  @id @default(cuid())
   name        String
-  slug        String    @unique
+  slug        String  @unique
   image       String?
   description String?
 
-  products    Product[]
+  products Product[]
 }
 
 model Seller {
-  id          String    @id @default(cuid())
-  name        String
-  email       String    @unique
-  phone       String?
-  shopName    String
+  id           String  @id @default(cuid())
+  name         String
+  email        String  @unique
+  phone        String?
+  shopName     String
   profileImage String?
 
-  products    Product[]
+  products Product[]
 }
 
 model Product {
-  id              String   @id @default(cuid())
-  name            String
-  slug            String   @unique
+  id   String @id @default(cuid())
+  name String
+  slug String @unique
 
   shortDescription String
   description      String
 
-  price           Float
-  salePrice       Float?
+  price     Float
+  salePrice Float?
 
-  mainImage       String
+  mainImage String
 
-  gallery         String[]
+  gallery String[]
 
-  stock           Int
+  stock Int
 
-  rating          Float @default(5)
+  rating Float @default(5)
 
-  reviewCount     Int @default(0)
+  reviewCount Int @default(0)
 
-  badge           Badge?
+  badge Badge?
 
-  status          ProductStatus @default(IN_STOCK)
+  status ProductStatus @default(IN_STOCK)
 
-  createdAt       DateTime @default(now())
+  createdAt DateTime @default(now())
 
-  updatedAt       DateTime @updatedAt
+  updatedAt DateTime @updatedAt
 
-  categoryId      String
-  category        Category @relation(fields:[categoryId], references:[id])
+  categoryId String
+  category   Category @relation(fields: [categoryId], references: [id])
 
-  sellerId        String
-  cartItems       CartItem[]
-  seller          Seller @relation(fields:[sellerId], references:[id])
+  sellerId   String
+  cartItems  CartItem[]
+  seller     Seller      @relation(fields: [sellerId], references: [id])
+  orderItems OrderItem[]
 }
 
 model Cart {
-  id        String     @id @default(cuid())
-  sessionId String     @unique
-  createdAt DateTime   @default(now())
-  updatedAt DateTime   @updatedAt
+  id        String   @id @default(cuid())
+  sessionId String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
-  items     CartItem[]
+  items CartItem[]
 }
 
 model CartItem {
@@ -91,12 +92,52 @@ model CartItem {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  cartId    String
-  cart      Cart     @relation(fields: [cartId], references: [id], onDelete: Cascade)
+  cartId String
+  cart   Cart   @relation(fields: [cartId], references: [id], onDelete: Cascade)
 
   productId String
-  product   Product  @relation(fields: [productId], references: [id])
+  product   Product @relation(fields: [productId], references: [id])
 
   @@unique([cartId, productId])
 }
 
+enum OrderStatus {
+  PENDING
+  CONFIRMED
+  SHIPPED
+  DELIVERED
+  CANCELLED
+}
+
+enum PaymentMethod {
+  COD
+}
+
+model Order {
+  id            String        @id @default(cuid())
+  orderNumber   String        @unique
+  customerName  String
+  phone         String
+  address       String
+  city          String
+  paymentMethod PaymentMethod @default(COD)
+  status        OrderStatus   @default(PENDING)
+  subtotal      Float
+  shippingFee   Float
+  total         Float
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+
+  items OrderItem[]
+}
+
+model OrderItem {
+  id          String   @id @default(cuid())
+  productName String
+  unitPrice   Float
+  quantity    Int
+  orderId     String
+  order       Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId   String?
+  product     Product? @relation(fields: [productId], references: [id])
+}
