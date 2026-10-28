@@ -16,22 +16,40 @@ export default function CheckoutPage() {
   const [address, setAddress] = useState("");
   const [city, setCity] = useState("");
   useEffect(() => {
-    fetch("/api/cart")
-      .then((response) => response.json())
-      .then((data) => {
+    async function loadCheckoutCart() {
+      try {
+        const sessionId = localStorage.getItem("zinam-cart-session");
+
+        if (!sessionId) {
+          router.replace("/cart");
+          return;
+        }
+
+        const response = await fetch(
+          "/api/cart?sessionId=" + encodeURIComponent(sessionId)
+        );
+        const data = await response.json();
+
+        if (!response.ok) {
+          throw new Error(data.error || "Unable to load your cart.");
+        }
+
         if (!data.items?.length) {
           router.replace("/cart");
           return;
         }
 
         setItems(data.items);
-      })
-      .catch(() => {
-        setError("Unable to load your cart.");
-      })
-      .finally(() => {
+      } catch (err) {
+        setError(
+          err instanceof Error ? err.message : "Unable to load your cart."
+        );
+      } finally {
         setLoading(false);
-      });
+      }
+    }
+
+    loadCheckoutCart();
   }, [router]);
 
   const subtotal = items.reduce((sum, item) => {
