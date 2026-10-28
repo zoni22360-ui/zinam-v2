@@ -67,12 +67,19 @@ export default function CheckoutPage() {
     try {
       setPlacing(true);
 
+      const sessionId = localStorage.getItem("zinam-cart-session");
+
+      if (!sessionId) {
+        throw new Error("Your cart session was not found. Please return to your cart.");
+      }
+
       const response = await fetch("/api/orders", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          sessionId,
           customerName: name,
           phone,
           address,

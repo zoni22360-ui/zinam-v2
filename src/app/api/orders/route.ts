@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 
-const SESSION_COOKIE = "zinam-cart-session";
-const SHIPPING_FEE = 0;
+const SHIPPING_FEE = 200;
 
 export async function POST(request: NextRequest) {
   try {
@@ -20,7 +19,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const sessionId = request.cookies.get(SESSION_COOKIE)?.value;
+    const sessionId = String(body.sessionId ?? "").trim();
 
     if (!sessionId) {
       return NextResponse.json(
